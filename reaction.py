@@ -5,6 +5,7 @@ from random import choice
 
 # Инициализация клиента
 app = Client(
+    'my_name',
     api_id='---',
     api_hash='---'
 )
