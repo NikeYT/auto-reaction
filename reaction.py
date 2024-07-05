@@ -3,7 +3,7 @@ from pyrogram import types, filters
 from pyrogram.errors.exceptions.bad_request_400 import ReactionInvalid, ReactionEmpty
 from random import choice
 
-# Инициализация клиента
+# Инициализация клиента / Initialize of client
 app = Client(
     'my_name',
     api_id='---',
@@ -12,7 +12,7 @@ app = Client(
 
 @app.on_message(filters=filters.chat("---"))
 def call_react(client: Client, message: types.Message):
-    smile = '👎' #Change to your smile
+    smile = '👎' # Смените на ваш нужный / Change to your smile
     try:
         app.send_message(chat_id=message.chat.id, message_id=message.id, emoji=choice(smile))
     except (ReactionInvalid, ReactionEmpty):
